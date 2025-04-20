@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Amay Chinchmalatpure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #000000e8;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .sidebar a {
+            color: rgba(255, 255, 255, 0.67);
+            text-decoration: none;
+            padding: 8px 10px;
+            font-size: 17px;
+            width: 100%;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .sidebar a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #00ff11, #bb00ff);
+            transition: width 0.3s ease-in-out;
+            border-radius: 50px;
+        }
+
+        .sidebar a:hover::before {
+            width: 100%;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.08);
+            transform: translateX(6px);
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .services-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgb(62, 106, 230);
+        }
+
+        .service h3 {
+            margin: 10px 0 5px;
+        }
+
+        .service p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .v2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 0.35;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video" class="v2">
+        <source src="C:\Users\user\OneDrive\Documents\Portfolio\6913203_Motion Graphics_Motion Graphic_1920x1080.mp4"
+            type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="sidebar">
+        <a href="index.html"><b>Home</b></a>
+        <a href="skills.html"><b>Skills</b></a>
+        <a href="services.html"><b>Services</b></a>
+        <a href="projects.html"><b>Projects</b></a>
+        <a href="blog.html"><b>Blog</b></a>
+    </div>
+
+    <div class="content">
+        <section class="services-section">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Logo Design</h3>
+                    <p>Professional and unique logos tailored to your brand.</p>
+                </div>
+                <div class="service">
+                    <h3>Resume Making</h3>
+                    <p>Modern, impactful resumes designed to stand out.</p>
+                </div>
+                <div class="service">
+                    <h3>Script Writing</h3>
+                    <p>Creative and engaging scripts for YouTube or films.</p>
+                </div>
+                <div class="service">
+                    <h3>Song Lyrics Writing</h3>
+                    <p>Original lyrics written for any mood or genre.</p>
+                </div>
+                <div class="service">
+                    <h3>Thumbnail Creation</h3>
+                    <p>Eye-catching thumbnails that boost click-through rates.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

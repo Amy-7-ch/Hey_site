@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amay Chinchmalatpure | Creative Freelancer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="C:\Users\user\Downloads\0_Technology_Abstract_1920x1080.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <header>
+        <a href="C:\Users\user\OneDrive\Pictures\b.jpg" class="download-btn" download>Download Resume</a>
+        <button class="toggle-theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+        <h1 class="hero-heading">Hola, I'm Amay Chinchmalatpure</h1>
+        <p class="qw"><b>Creative Freelancer | Designer | Developer</b></p>
+        <nav class="nav-buttons">
+            <a href="skills.html" class="nav-btn">Skills</a>
+            <a href="services.html" class="nav-btn">Services</a>
+            <a href="projects.html" class="nav-btn">Projects</a>
+            <a href="blog.html" class="nav-btn">Blog</a>
+        </nav>
+    </header>
+
+    <div class="linkedin-scroll">
+        <p>Let’s connect professionally with me</p>
+        <a href="https://www.linkedin.com/in/amay-054394325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank" class="linkedin-btn">
+            LinkedIn Profile
+        </a>
+    </div>
+
+    <div class="blob-container">
+        <div class="blob-wrapper">
+            <img src="C:\Users\user\OneDrive\Pictures\ei_1740575602721-removebg-preview (1).png" alt="Profile Image"
+                class="profile-img" />
+        </div>
+        <div class="about-ai">
+            <p class="line line1">Aspiring AI and Data Science Learner</p>
+            <p class="line line2">Passionate about AI Research and Analytics</p>
+            <p class="line line3">Handling Data-driven Insights and ML Solutions</p>
+        </div>
+    </div>
+
+    <section action="" name="formgroup" class="contact-section fade-in">
+        <div class="container">
+            <h2 class="cm">Contact Me</h2>
+            <p class="it">If you have any questions or want to get in touch, feel free to reach out!</p>
+            <br>
+            <form id="contactForm" class="contact-form">
+                <label for="name"><b>Full Name</b></label>
+                <input type="text" id="Name" name="name" placeholder="Your Name" required>
+
+                <label for="email"><b>Email Address</b></label>
+                <input type="email" id="Email" name="email" placeholder="Your Email" required>
+
+                <label for="message"><b>Message</b></label>
+                <textarea id="Message" name="message" placeholder="Your Message" required></textarea>
+
+                <button type="button" class="SM" onclick="send()">Send Message</button>
+                <p id="form-response" class="form-response"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p class="aq">&copy; 2025 Amay Chinchmalatpure. Built with passion and purpose.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+
+        function send() {
+            console.log("Proceed")
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "er.engineer77@gmail.com",
+                Password: "ADDA54DB00D5B4B9F54C048C30747D0F7262",
+                To: 'er.engineer77@gmail.com',
+                From: "er.engineer77@gmail.com",
+                Subject: "Hola",
+                Body: "Hey"
+            }).then(
+                message => {
+                    if (message === 'ok') {
+                        swal("Good job!", "Ur data successfully recieved ", "success");
+                    }
+                    else
+                        swal("Warning", "Ur data successfully got an error ", "error");
+                }
+            );
+        }
+    </script>
+</body>
+
+</html>
